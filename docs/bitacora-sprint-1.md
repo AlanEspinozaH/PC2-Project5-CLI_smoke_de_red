@@ -1,3 +1,3 @@
 # Bitácora Sprint 1
 
-Comandos, salidas recortadas, decisiones.
+Comandos, salidas recortadas, decisiones..
