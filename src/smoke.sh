@@ -35,7 +35,11 @@ is_ip(){ [[ "$1" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ || "$1" =~ : ]]; }
 resolves(){
   local h="$1"
   is_ip "$h" && return 0
-  getent ahosts "$h" >/dev/null 2>&1
+  local ec=0
+  # Intento rápido: HEAD por HTTP (si no hay servicio, da otro código; si es DNS, cURL sale con 6)
+  curl -sS -I --connect-timeout 1 "http://$h" >/dev/null 2>&1 || ec=$?
+  [[ $ec -eq 6 ]] && return 1   # 6 = CURLE_COULDNT_RESOLVE_HOST (DNS)
+  return 0
 }
 
 trap 'echo "[trap] $(ts) fin de ejecución. Ver out/raw/ y out/report.csv" >&2' EXIT
@@ -66,17 +70,27 @@ for h in "${HOSTS_[@]}"; do
     http="NA,NA"
 
     if [[ "$p" == "80" || "$p" == "443" ]]; then
-      if declare -F probe_http >/dev/null; then
-        http="$(probe_http "$h" "$p")"
-        [[ "$http" == ERR,* ]] && (( exit_code < E_HTTP )) && exit_code=$E_HTTP
-      else
-        http="NA,NA"
-      fi
+        if declare -F probe_http >/dev/null; then
+            http="$(probe_http "$h" "$p")"
+            
+            if [[ "$http" == ERR,* ]]; then
+                (( exit_code < E_HTTP )) && exit_code=$E_HTTP
+            else
+                IFS=, read -r __code __time <<<"$http"
+                if [[ "$__code" =~ ^[0-9]{3}$ && "$__code" -ge 400 ]]; then
+                    (( exit_code < E_HTTP )) && exit_code=$E_HTTP
+                fi
+            fi
+        fi
     fi
 
-    [[ "$tcp" == "CLOSED" ]] && (( exit_code < E_NET )) && exit_code=$E_NET
+    if [[ "$tcp" == "CLOSED" ]]; then
+        (( exit_code < E_NET )) && exit_code=$E_NET
+    fi
+
     echo "$(ts),$h,$p,$tcp,$http" >>"$CSV"
   done
+
 done
 
 # SSH extras si el puerto 22 está en PORTS
