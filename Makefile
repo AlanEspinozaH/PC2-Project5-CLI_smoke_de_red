@@ -24,7 +24,7 @@ $(OUT)/.deps.ok: $(SRC)/smoke.sh Makefile
 test: ## Ejecuta pruebas Bats (AAA/RGR)
 	@bats -T "$(ROOT)/tests"
 
-run: ## Orquesta sondas y genera out/report.csv
+run: ## Orquesta sondas y propaga exit code
 	@"$(SRC)/smoke.sh"
 
 pack: ## Empaqueta reproducible en dist/ (usa RELEASE)

@@ -12,6 +12,7 @@ OUT="$ROOT/out"; RAW="$OUT/raw"
 mkdir -p "$RAW"
 
 # Variables de entorno (12-Factor)
+
 IFS=, read -r -a HOSTS_ <<< "${HOSTS:-example.com}"
 IFS=, read -r -a PORTS_ <<< "${PORTS:-80,443}"
 RELEASE="${RELEASE:-dev}"
@@ -32,14 +33,12 @@ fi
 ts(){ date +%FT%T%z; }
 is_ip(){ [[ "$1" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ || "$1" =~ : ]]; }
 
+# DNS: usa getent para distinguir fallo de resolución (más robusto que curl)
 resolves(){
-  local h="$1"
-  is_ip "$h" && return 0
-  local ec=0
-  # Intento rápido: HEAD por HTTP (si no hay servicio, da otro código; si es DNS, cURL sale con 6)
-  curl -sS -I --connect-timeout 1 "http://$h" >/dev/null 2>&1 || ec=$?
-  [[ $ec -eq 6 ]] && return 1   # 6 = CURLE_COULDNT_RESOLVE_HOST (DNS)
-  return 0
+  local h="$1"; is_ip "$h" && return 0
+  # DNS ok ⇒ curl -I retorna ≠6 (puede ser 7/28 etc., lo importante es distinguir 6)
+  curl -sS -I --connect-timeout 1 "http://$h" >/dev/null 2>&1
+  [[ $? -ne 6 ]]
 }
 
 trap 'echo "[trap] $(ts) fin de ejecución. Ver out/raw/ y out/report.csv" >&2' EXIT
@@ -48,7 +47,7 @@ trap 'echo "[trap] $(ts) fin de ejecución. Ver out/raw/ y out/report.csv" >&2' 
 CSV="$OUT/report.csv"
 echo "timestamp,host,port,tcp,http_code,http_time" >"$CSV"
 
-# Capturas de sistema
+# Capturas de sistema (no afectan exit_code)
 probe_ip
 probe_ss
 log_jctl
@@ -69,31 +68,31 @@ for h in "${HOSTS_[@]}"; do
     tcp="$(probe_tcp "$h" "$p")"
     http="NA,NA"
 
+    # HTTP sólo para 80/443 si existe el módulo
     if [[ "$p" == "80" || "$p" == "443" ]]; then
-        if declare -F probe_http >/dev/null; then
-            http="$(probe_http "$h" "$p")"
-            
-            if [[ "$http" == ERR,* ]]; then
-                (( exit_code < E_HTTP )) && exit_code=$E_HTTP
-            else
-                IFS=, read -r __code __time <<<"$http"
-                if [[ "$__code" =~ ^[0-9]{3}$ && "$__code" -ge 400 ]]; then
-                    (( exit_code < E_HTTP )) && exit_code=$E_HTTP
-                fi
-            fi
+      if declare -F probe_http >/dev/null; then
+        http="$(probe_http "$h" "$p")" || true
+        if [[ "$http" == ERR,* ]]; then
+          (( exit_code < E_HTTP )) && exit_code=$E_HTTP
+        else
+          IFS=, read -r __code __time <<<"$http"
+          if [[ "${__code:-}" =~ ^[0-9]{3}$ && "$__code" -ge 400 ]]; then
+            (( exit_code < E_HTTP )) && exit_code=$E_HTTP
+          fi
         fi
+      fi
     fi
 
-    if [[ "$tcp" == "CLOSED" ]]; then
-        (( exit_code < E_NET )) && exit_code=$E_NET
+    # TCP severidad
+    if [[ "$tcp" != "OPEN" ]]; then
+      (( exit_code < E_NET )) && exit_code=$E_NET
     fi
 
     echo "$(ts),$h,$p,$tcp,$http" >>"$CSV"
   done
-
 done
 
-# SSH extras si el puerto 22 está en PORTS
+# SSH extras si el puerto 22 está en PORTS (no afectan exit_code)
 if printf '%s\n' "${PORTS_[@]}" | grep -qx '22'; then
   for h in "${HOSTS_[@]}"; do
     bnr="$(probe_ssh_banner "$h" || true)"

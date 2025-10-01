@@ -1,4 +1,3 @@
-Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: PCI: Fatal: No config space access function found
 Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: /dev/sdd: Can't open blockdev
 Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
 Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
@@ -104,3 +103,4 @@ Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_inf
 Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
 Oct 01 02:41:04 DESKTOP-CM8SKM6 login[326]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
 Oct 01 02:41:04 DESKTOP-CM8SKM6 login[326]: PAM adding faulty module: pam_lastlog.so
+Oct 01 06:37:58 DESKTOP-CM8SKM6 unknown: WSL (239) ERROR: CheckConnection: getaddrinfo() failed: -5

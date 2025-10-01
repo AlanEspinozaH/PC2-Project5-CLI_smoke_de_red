@@ -17,6 +17,7 @@ probe_tcp() {
   else
     echo "CLOSED"
   fi
+  return 0
 }
 
 # Retorna la primera línea del banner SSH o vacío
@@ -35,8 +36,8 @@ probe_scp_rsync_optional() {
   [[ -n "$ssh_user" && -n "$ssh_host" ]] || return 0
 
   # scp: intento de envío hacia /dev/null remoto (puede fallar por permisos; se registra y se continúa)
-  scp -q ${ssh_key:+-i "$ssh_key"} -P "$ssh_port" /etc/hosts "${ssh_user}@${ssh_host}:/dev/null"     >>"$RAW/ssh_scp.log" 2>&1 || true
+  scp -q ${ssh_key:+-i "$ssh_key"} -P "$ssh_port" /etc/hosts "${ssh_user}@${ssh_host}:/dev/null" >>"$RAW/ssh_scp.log" 2>&1 || true
 
   # rsync dry-run hacia /dev/null remoto
-  rsync --dry-run -e "ssh ${ssh_key:+-i "$ssh_key"} -p ${ssh_port}" /etc/hosts "${ssh_user}@${ssh_host}:/dev/null"     >>"$RAW/ssh_rsync.log" 2>&1 || true
+  rsync --dry-run -e "ssh ${ssh_key:+-i "$ssh_key"} -p ${ssh_port}" /etc/hosts "${ssh_user}@${ssh_host}:/dev/null" >>"$RAW/ssh_rsync.log" 2>&1 || true
 }
