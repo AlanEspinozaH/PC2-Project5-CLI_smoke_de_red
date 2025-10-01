@@ -1,0 +1,2 @@
+timestamp,host,port,tcp,http_code,http_time
+2025-10-01T03:09:48-0500,example.com,80,OPEN,NA,NA

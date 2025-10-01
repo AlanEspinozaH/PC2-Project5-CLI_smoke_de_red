@@ -1,0 +1,106 @@
+Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: PCI: Fatal: No config space access function found
+Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: /dev/sdd: Can't open blockdev
+Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 22 16:30:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Sep 22 16:30:31 DESKTOP-CM8SKM6 login[316]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+Sep 22 16:30:31 DESKTOP-CM8SKM6 login[316]: PAM adding faulty module: pam_lastlog.so
+Sep 22 16:30:32 DESKTOP-CM8SKM6 unknown: WSL (247) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 22 17:22:44 DESKTOP-CM8SKM6 unknown: WSL (247) ERROR: CheckConnection: getaddrinfo() failed: -5
+-- Boot 5015d628865b4599b32310ea364eb47a --
+Sep 22 23:14:27 DESKTOP-CM8SKM6 kernel: PCI: Fatal: No config space access function found
+Sep 22 23:14:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Sep 22 23:14:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 22 23:14:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 22 23:14:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 22 23:14:28 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Sep 22 23:14:28 DESKTOP-CM8SKM6 login[305]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+Sep 22 23:14:28 DESKTOP-CM8SKM6 login[305]: PAM adding faulty module: pam_lastlog.so
+Sep 22 23:14:58 DESKTOP-CM8SKM6 unknown: WSL (243) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 23 01:05:47 DESKTOP-CM8SKM6 adduser[862]: The user `devsec' already exists.
+Sep 23 01:05:47 DESKTOP-CM8SKM6 addgroup[866]: The group `ops' already exists.
+Sep 23 01:10:36 DESKTOP-CM8SKM6 addgroup[901]: The group `ops' already exists.
+-- Boot 4bea9c90940d43ef854d1bbe78828c44 --
+Sep 23 09:14:08 DESKTOP-CM8SKM6 kernel: PCI: Fatal: No config space access function found
+Sep 23 09:14:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Sep 23 09:14:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 23 09:14:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 23 09:14:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 23 09:14:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Sep 23 09:14:10 DESKTOP-CM8SKM6 login[301]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+Sep 23 09:14:10 DESKTOP-CM8SKM6 login[301]: PAM adding faulty module: pam_lastlog.so
+Sep 23 09:14:53 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 23 09:40:23 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 23 09:55:11 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 23 10:31:13 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 23 10:40:15 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 23 12:42:18 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 23 12:56:59 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -3
+Sep 23 12:57:04 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 23 13:17:30 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 13:52:02 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 15:30:00 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 16:20:55 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 16:25:35 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 16:27:26 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 17:04:08 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 17:16:54 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 18:42:45 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 18:42:45 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 24 19:45:00 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 25 00:28:43 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 25 04:10:12 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 25 07:10:54 DESKTOP-CM8SKM6 unknown: WSL (234) ERROR: CheckConnection: getaddrinfo() failed: -5
+-- Boot e23dea56522f4a2dbc1b4080c53ce8d7 --
+Sep 29 09:44:16 DESKTOP-CM8SKM6 kernel: PCI: Fatal: No config space access function found
+Sep 29 09:44:16 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Sep 29 09:44:16 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 09:44:16 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 09:44:16 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 09:44:16 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+-- Boot 2576ccb4c56a47b6ad08e94e779b46b2 --
+Sep 29 09:58:15 DESKTOP-CM8SKM6 kernel: PCI: Fatal: No config space access function found
+Sep 29 09:58:15 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Sep 29 09:58:15 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 09:58:15 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 09:58:15 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 09:58:15 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Sep 29 09:58:17 DESKTOP-CM8SKM6 login[291]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+Sep 29 09:58:17 DESKTOP-CM8SKM6 login[291]: PAM adding faulty module: pam_lastlog.so
+Sep 29 09:59:04 DESKTOP-CM8SKM6 unknown: WSL (236) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 29 10:01:36 DESKTOP-CM8SKM6 systemd[1]: Failed unmounting init.mount - /init.
+-- Boot 0554f977aa154eff9371a4e03bb05604 --
+Sep 29 10:08:08 DESKTOP-CM8SKM6 kernel: PCI: Fatal: No config space access function found
+Sep 29 10:08:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Sep 29 10:08:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 10:08:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 10:08:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Sep 29 10:08:08 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Sep 29 10:08:10 DESKTOP-CM8SKM6 login[293]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+Sep 29 10:08:10 DESKTOP-CM8SKM6 login[293]: PAM adding faulty module: pam_lastlog.so
+Sep 29 10:08:56 DESKTOP-CM8SKM6 unknown: WSL (241) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 29 22:04:18 DESKTOP-CM8SKM6 unknown: WSL (241) ERROR: CheckConnection: getaddrinfo() failed: -3
+Sep 29 22:04:23 DESKTOP-CM8SKM6 unknown: WSL (241) ERROR: CheckConnection: getaddrinfo() failed: -5
+Sep 30 00:02:52 DESKTOP-CM8SKM6 unknown: WSL (241) ERROR: CheckConnection: getaddrinfo() failed: -5
+-- Boot f41a4494b142449d9611cf2d27e3c03b --
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: PCI: Fatal: No config space access function found
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Oct 01 02:41:03 DESKTOP-CM8SKM6 unknown: WSL (239) ERROR: CheckConnection: getaddrinfo() failed: -5
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Oct 01 02:41:03 DESKTOP-CM8SKM6 kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Oct 01 02:41:04 DESKTOP-CM8SKM6 login[326]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+Oct 01 02:41:04 DESKTOP-CM8SKM6 login[326]: PAM adding faulty module: pam_lastlog.so
